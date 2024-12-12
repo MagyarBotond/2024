@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+  <title>feladatok_03</title>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="pyscript.css" />
+  <link rel="stylesheet" href="py-script.css" />
+  <link href="taki.ico" rel="shortcut icon" >
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="bootstrap.min.css" rel="stylesheet">
+  <script src="bootstrap.bundle.min.js"></script>
+  <link rel="stylesheet" href="takipy.css">
+  <script defer src="pyscript.js"></script>
+  <script src="takipy.js"></script>
+  <script src="oldal_tetejere_nyil.js"></script>
+  <script src="popper.min.js"></script>
+  <style>
+  body {
+	background-color: #1e415d;
+}
+  .container.mt-5 .row .col-sm-4 table tr td div {
+	font-family: Comic Sans MS, cursive;
+}
+  .container.mt-5 .row .col-sm-4 table tr td div {
+	font-family: Comic Sans MS, cursive;
+}
+  a:link {
+	color: #CCCCCC;
+	text-decoration: none;
+}
+  a:hover {
+	color: #CCCCCC;
+	text-decoration: none;
+}
+  a:visited {
+	color: #CCCCCC;
+	text-decoration: none;
+}
+a:active {
+	color: #CCCCCC;
+	text-decoration: none;
+}
+  body,td,th {
+	color: #CCCCCC;
+}
+  </style>
+</head>
+<body>
+<div class="container mt-5">
+  <a href="index.html" style="text-align: center;">[Főoldal]</a>
+<p>&nbsp;</p>
+<p><span><strong>1. Feladat</strong></span><br>
+Írj egy programot, amely kiírja a páros számokat 1 és 10 között! (2 4 6 8 10)<br>
+</p>
+
+<p>A program forrása:</p>
+<pre class="language-python">
+    <code class="language-python">    
+for szam in range(1, 11):
+    if szam % 2 == 0:
+    	print(f"{szam}", end = ' ')
+print()
+print(f"A program vége")
+	</code>
+</pre>   
+
+<p><a href="while_feladatok_01.html">A program futtatása >>></a></p>
+<py-script>
+    for szam in range(1, 11):
+        if szam % 2 == 0:
+            print(f"{szam}", end = ' ')
+    print()
+    print(f"A program vége")   
+</py-script>
+<py-terminal></py-terminal>
+
+<p>&nbsp;</p>
+
+</div>
+</body>
+</html>

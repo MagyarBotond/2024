@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="hu">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>feladat_02.v2</title>
+    <link rel="stylesheet" href="feladat_01.css">
+    <link rel="stylesheet" href="style.css">
+    <style>
+      .box{
+    background-color: rgb(40, 38, 38);
+    color: white;
+    width: 65%;
+    padding: 40px;
+    margin: auto;
+    text-align: center;
+}
+
+    </style>
+</head>
+
+<body style="background-color: #1e415d;">
+    <h1 style="margin-bottom: 50px; text-align: center;">
+        <a href="index.html" style="text-align: center;">[Főoldal]</a>
+        Magyar Botond 10.D - IKT 'feladat_02'
+    </h1>
+
+    <div _ngcontent-ng-c1695525992="" class="tabcontent">
+        IKT 10. évfolyam
+        2. feladat
+        
+        feladat_02.html
+        A feladat_02-hez tartozó fájlok nevei a feladat_02 legyen.
+        Pl. feladat_02.html, feladat_02.mp4, feladat_02.jpg stb.
+        
+        A feladat_02.html oldal tartalmazza a feladat szövegét, és a megoldását.
+        A megjelenés a sulipy.hu oldal példák menüpontja szerint készítsétek el.
+        A feladat_02.html oldalt az index.html oldalról megynyitható legyen.
+        
+        Beadandó: Az index.html, és a feladat_02.html oldalról készítsetek egy képernyőképet, és töltsétek fel a megadott határidőig a classroomba!
+        
+        2. feladat ---> feladat_02.html
+        
+        Készíts egy rövid programot, amely a felhasználótól bekéri a kör sugarát, és ennek alapján kiszámolja a kör kerületét és területét!
+        A kör területe: sugár szorozva sugár szorozva 3.14
+        A kör kerülete: 2 szorozva sugár szorozva 3.14
+        <div class="code-toolbar">
+          <pre _ngcontent-ng-c1695525992="" class="language-python" tabindex="0"><code _ngcontent-ng-c1695525992="" class="language-python">
+          from math import pi
+          if __name__ == '__main__':
+          r = float(input('A kör sugara: '))
+          k = 2 * r * pi
+          t = r * r * pi
+          print('A(z) %g sugarú kör kerülete %g és területe %g' % (r, k, t))
+              </code></pre>
+            </div>
+            <p></p>
+            <form>
+                <label for="radius">A kör sugara:</label>
+                <input type="number" id="radius" name="radius"><br><br>
+                <button type="button" onclick="calculate()">Számítás</button>
+              </form>
+              <p id="result"></p>
+            
+              <script>
+                function calculate() {
+                  const radius = parseFloat(document.getElementById("radius").value);
+                  const circumference = 2 * radius * Math.PI;
+                  const area = radius * radius * Math.PI;
+                  document.getElementById("result").innerHTML = `A(z) ${radius} sugarú kör kerülete ${circumference} és területe ${area}`;
+                }
+              </script>
+      </div>
+</body>
+
+</html>
