@@ -1,0 +1,8 @@
+http://takinfotaki.nhely.hu/
+http://kandoteszteles.nhely.hu/
+
+
+Hogyan kell a nhelyembe belépni:
+https://www.nethely.hu/
+total commanderbe beírom azt a kódót amivel belépek az enhely fiókomba
+total commander -> ftp -> új kapcslat - > kiszolgáló neve: ftp.nethely.hu -> magyarb

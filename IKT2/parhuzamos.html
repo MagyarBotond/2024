@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="1felev/feladat_01.css">
+    <title>Párhuzamos eredő - MagyarB</title>
+    <style>
+                label {
+            margin-top: 10px;
+        }
+        input[type="number"] {
+            padding: 5px;
+            margin: 5px 0;
+            width: 100px;
+        }
+        input[type="submit"] {
+            padding: 10px 20px;
+            margin-top: 10px;
+            cursor: pointer;
+        }
+        .result {
+            margin-top: 20px;
+            font-size: 1.2em;
+        }
+        div {
+            background-color: #46040a57;
+            padding: 50px;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>
+        <a href="old_index_feladat.html" style="text-align: center;">[Főoldal]</a>
+        Párhuzamos Ellenállás Számítása</h1>
+    
+
+    <div>
+        <form id="resistance-form">
+            <label for="r1">Első ellenállás (Ohm):</label>
+            <input type="number" id="r1" name="r1" step="any" required><br><br>
+        
+            <label for="r2">Második ellenállás (Ohm):</label>
+            <input type="number" id="r2" name="r2" step="any" required><br><br>
+            <input type="submit" value="Számítás">
+        </form>
+    </div>
+
+    <div class="result" id="result"></div>
+
+    <script>
+
+        function calculateParallelResistance(r1, r2) {
+            return 1 / (1 / r1 + 1 / r2); 
+        }
+
+
+        document.getElementById('resistance-form').addEventListener('submit', function(event) {
+            event.preventDefault(); 
+
+
+            const r1 = parseFloat(document.getElementById('r1').value);
+            const r2 = parseFloat(document.getElementById('r2').value);
+
+     
+            const result = calculateParallelResistance(r1, r2);
+
+            document.getElementById('result').innerText = `A párhuzamos ellenállás eredője: ${result.toFixed(2)} Ohm`;
+        });
+    </script>
+</body>
+</html>
